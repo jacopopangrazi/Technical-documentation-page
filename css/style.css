@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+
+html,
+body {
+  min-width: 290px;
+  color: #4d4e53;
+  background-color: #ffffff;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.8;
+  scroll-behavior: smooth;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: thin;
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #fff;
+  z-index: 3;
+}
+
+#navbar li {
+  color: #4d4e53;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  background: #fff;
+  z-index: 3;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#navbar a:hover {
+  background: #f8f8f8;
+}
+
+#main-doc {
+  position: relative;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+section article {
+  color: #4d4e53;
+  margin: 15px;
+  font-size: 0.96em;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+/* Mobile arrow */
+#mobile-arrow {
+  cursor: pointer;
+  z-index: 5;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid gray;
+  border-radius: 25px;
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.5s ease;
+  display: none;
+}
+
+#mobile-arrow img {
+  width: 40px;
+  height: 40px;
+}
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #mobile-arrow {
+    display: flex;
+  }
+
+  #navbar {
+    background: #fff;
+    z-index: 4;
+    transition: all 0.5s ease;
+    left: -315px;
+  }
+
+  #navbar ul li {
+    text-align: center;
+  }
+
+  #main-doc {
+    margin-left: -10px;
+  }
+
+  #main-doc header {
+    text-align: center;
+  }
+
+  code {
+    white-space: normal;
+    margin-left: -20px;
+    width: 90%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 233px;
+  }
+}
